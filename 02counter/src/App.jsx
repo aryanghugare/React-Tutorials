@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
 
-const [counter,setCounter ] =useState(15) // counter is the varaible name , and setCounter is the function which 
+const [counter,setCounter ] = useState(15) // counter is the varaible name , and setCounter is the function which 
 // performs some operation on this variable (counter )
 
 
