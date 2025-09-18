@@ -3,7 +3,7 @@ import './App.css'
 import { useCallback } from 'react';
 
 function App() {
-  const [length , setLength ] = useState(8);
+const [length , setLength ] = useState(8);
 const[numberAllowed,setNumberAllowed] = useState(false )
 const[charAllowed, setCharAllowed] = useState(false)
 const[password,setPassword] = useState("")
