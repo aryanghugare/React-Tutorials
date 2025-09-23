@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector ,useDispatch } from 'react-redux'
-import { removeTodo , updateTodo } from '../features/todo/todoSlice'
+import { removeTodo , updateTodo ,toggleEditing ,setEditingId,setEditingText } from '../features/todo/todoSlice'
 import Addtodo from './Addtodo'
 
 function Todos() {
 
 const todos = useSelector(state => state.todos)
+let edits = useSelector((state)=> state.editingTodo) 
+
 
 const dispatch = useDispatch()
   return (
@@ -14,15 +16,22 @@ const dispatch = useDispatch()
 <ul className='flex flex-col'>
 {
 todos.map((todo)=>{
-console.log(todo);
+
 return (
 <li key={todo.id} className='bg-gray-200 text-xl  rounded-3xl  m-2 px-12 italic py-2  flex justify-between items-center w-300' >
-{todo.text.toUpperCase()}
+{todo.text}
 <div class="icons" >
 
 <button
-onClick={(e)=> 
-dispatch(updateTodo(todo.id))}
+onClick={(e)=> {
+console.log(edits);
+
+dispatch(toggleEditing(!edits)) 
+dispatch(setEditingId(todo.id))
+
+}
+}
+
  className="px-3 py-2 bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600 active:scale-95 transition mx-2">
   ✏️
 </button>

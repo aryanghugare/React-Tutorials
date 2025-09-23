@@ -10,7 +10,7 @@ completed : false
 ],
 
 addTodo: (todo)=>{},
-updatedTodo : (id,todo)=>{},
+updatedTodo : (id,todo)=>{}, // This method can also be updateTodo
 deleteTodo : (id)=>{},
 toggleCompleted : (id)=>{},
 })
