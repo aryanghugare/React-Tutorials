@@ -14,7 +14,7 @@ e.preventDefault();
 
 if(!input.length>0) return ;
 
-if(!edits){
+if(!edits){  // This means if we are not in editing mode
 dispatch(addTodo(input))  // so here 'input' goes as payload , dont need to write huge things manually  , 
 // here payload is not an object 
 

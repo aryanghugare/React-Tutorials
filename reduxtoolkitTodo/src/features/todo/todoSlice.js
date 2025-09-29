@@ -65,6 +65,7 @@ console.log(todo);
 
 })
 export const {addTodo,removeTodo,updateTodo,toggleEditing,setEditingId,setEditingText} = todoSlice.actions
+// this is action creator function that will be used in the components
 
 
-export default todoSlice.reducer
+export default todoSlice.reducer // This is the reducer function that will be used in the store
