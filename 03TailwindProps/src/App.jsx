@@ -20,7 +20,6 @@ let names = ['aryan','aditya','rijul']
 return <Card username = {name}/>
 })}
 
-
 {/* <Card username = "Aryan" /> */}
 </>
 

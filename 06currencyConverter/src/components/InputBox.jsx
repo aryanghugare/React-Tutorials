@@ -38,7 +38,13 @@ onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                     value={selectCurrency}
 onChange={(e)=> onCurrencyChange && onCurrencyChange(e.target.value) }
-                >
+  >
+{/* onCurrencyChange && ...
+ This is a short-circuit check.
+ It means:
+👉 If onCurrencyChange exists (is not undefined or null), then call it.
+👉 If it doesn’t exist, nothing happens (avoids errors like “undefined is not a function”). */}
+
                     
                         {
 currencyOptions.map((currency)=> {

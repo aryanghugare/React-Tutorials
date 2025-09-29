@@ -1,3 +1,5 @@
+// Better Approach , if you want to use Context 
+
 import { createContext, useContext } from "react";
 
 export const ThemeContext = createContext({
