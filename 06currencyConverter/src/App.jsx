@@ -14,7 +14,7 @@ const[convertedAmount , setConvertedAmount] = useState(0)
 const currencyInfo = useMine(from)
 // console.log(currencyInfo);
 
-const options = Object.keys(currencyInfo)
+const options = Object.keys(currencyInfo) // to get the currency options from the currencyInfo object keys 
 const swap = () => {
 setTo(from)
 setFrom(to) 

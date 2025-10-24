@@ -1,5 +1,7 @@
 import { useEffect,useState } from "react";
-
+// This custom hook fetches currency information based on the provided currency code.
+// This is bascially a reusable function that can be used in multiple components to get currency data.
+// In this case , the function is useCurrencyInfo 
 
 function useCurrencyInfo(currency){
 

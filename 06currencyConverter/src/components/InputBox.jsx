@@ -29,7 +29,7 @@ type="number"
 placeholder="Amount"
 disabled={amountDisabled}
 value = {amount}
-onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
+onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))} // onAmountChange && - This is a safety check - it only proceeds if onAmountChange function exists (prevents errors if the prop wasn't passed)
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -37,7 +37,7 @@ onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
                 <select
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                     value={selectCurrency}
-onChange={(e)=> onCurrencyChange && onCurrencyChange(e.target.value) }
+onChange={(e)=> onCurrencyChange && onCurrencyChange(e.target.value) }  // onCurrencyChange && - Checks if the function exists before calling it
   >
 {/* onCurrencyChange && ...
  This is a short-circuit check.
