@@ -20,7 +20,7 @@ setIsTodoEditable(false)
 }
 
 const toggleComplete = () => {
-toggleCompleted(todo.id)
+toggleCompleted(todo.id) // This method is coming from the context
 }
 
 
