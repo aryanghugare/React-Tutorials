@@ -11,6 +11,7 @@ import Contact from './components/Contact/Contact.jsx'
 import { Route } from 'react-router-dom'
 import User from './components/User/User.jsx'
 import Github, { githubInfoLoader } from './components/Github/Github.jsx'
+import Error from './components/Error/error.jsx'
 
 
 // 1st way to do the routes 
@@ -55,6 +56,7 @@ loader ={githubInfoLoader} // Loader is used for Api response data , basically u
 path='Github'
 element={<Github/>} 
 /> 
+<Route path='*' element={<Error/>}/> {/* This is to handle the error  */}
 
 
 {/* 
