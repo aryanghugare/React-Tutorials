@@ -18,8 +18,10 @@ const options = Object.keys(currencyInfo) // to get the currency options from th
 const swap = () => {
 setTo(from)
 setFrom(to) 
-setConvertedAmount(amount)
-setAmount(convertedAmount)
+// setConvertedAmount(amount)
+// setAmount(convertedAmount)
+setConvertedAmount(0)
+ setAmount(0)
 
 }
 

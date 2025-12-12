@@ -88,7 +88,7 @@ readOnly
 ref={passwordRef}
  />  
 
-<button className='bg-black rounded-md p-2 copyBtn' onClick={copyPasswordtoClipboard} ref= {buttonRef} >Copy</button>
+<button className='bg-black rounded-md p-2 copyBtn' onMouseEnter={()=>buttonRef.current.classList.add('bg-red-200')} onClick={copyPasswordtoClipboard} onMouseLeave={()=>buttonRef.current.classList.remove('bg-red-200')} ref= {buttonRef} >Copy</button>
 </div>
 <div className='flex text-sm gap-x-2 '>
 <div className='flex items-center gap-x-1'>
